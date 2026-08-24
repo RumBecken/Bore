@@ -38,3 +38,8 @@ A Navier Stokes flow on a structured grid.
 
 A simple implicit discontinous galerkin method on a Voronoi grid. 
 It targets multiple phases which can be coupled on surfaces and lines.
+
+## Libraries
+
+- oneMKL
+- intel MPI
