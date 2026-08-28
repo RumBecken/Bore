@@ -1,11 +1,22 @@
 # Bore
 
-Bore is a library of tools that are required to solve partial differential equations with a discontinous galerkin method.
-The tools facilitate the discretization of the weak formulation of the equations and mimic common mathematical notation.
+Bore is a library for solving partial differential equations (PDEs). 
+The library provides the necessary tools for discretizing PDEs using a discontinous Galerkin (DG) method.
+For the sake of clarity, Bore mimics common mathematical notation.
 
 Bore can be used to solve flow problems with multiple phases, fluid and solid, 
 and allows for constitutive equations defined in volumes,on surfaces and on lines. 
 Moreover, it supports moving meshes. 
+
+## Key Properties
+
+According to the DG method, 
+volume fields are continuous within the cells of the mesh and discontinuous at the cell surfaces. 
+In Bore, fields can be additionally defined only on surfaces between adjacent cells or on the lines between adjacent cell surfaces.
+Respectively, these fields are discontinuous on the lines of the mesh or on its corners.
+
+The mesh is a dynamic object structured like a linked list.
+
 
 ## Structure
 
