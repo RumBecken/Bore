@@ -8,14 +8,22 @@ Bore can be used to solve flow problems with multiple phases, fluid and solid,
 and allows for constitutive equations defined in volumes,on surfaces and on lines. 
 Moreover, it supports moving meshes. 
 
-## Key Properties
+## Fields
 
-According to the DG method, 
-volume fields are continuous within the cells of the mesh and discontinuous at the cell surfaces. 
-In Bore, fields can be additionally defined only on surfaces between adjacent cells or on the lines between adjacent cell surfaces.
-Respectively, these fields are discontinuous on the lines of the mesh or on its corners.
+Bore supports three types of fields:
+- Volume fields. 
+They are continuous within the cells of the mesh and discontinuous at the cell surfaces. 
+- Surface fields. 
+Surface fields are defined on the cell surfaces between adjacent cells.
+They are continuous within the surfaces but discontinuous on the lines between the adjacent surfaces.
+- Line fields. Line fields are defined on the lines between adjacent surfaces.
+They are continuous within the line but discontinous on the points between adjacent lines.   
 
-The mesh is a dynamic object structured like a linked list.
+Each field can be defined on all cells, surfaces or lines, or on respective subsets.
+
+## Mesh
+
+The mesh is dynamic and structured like a linked list.
 
 
 ## Structure
